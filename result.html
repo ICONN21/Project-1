@@ -1,34 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Choose Your Quiz</title>
-        <link rel="stylesheet" href="">
-        <link rel="stylesheet" href="">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
-    </head>
-    <body> 
-        <div class="result-containter">
-            <div class="result-title">
-                <h1>Quiz Scores</h1>
-            </div>
-            <div class="test-scores">
-                <h3> </h3>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Choose Your Quiz</title>
+    <link rel="stylesheet" href="./css/result.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+</head>
+
+<body class="container is-fullhd" id="body">
+    <div class="flex">
+        <div class="result-container box has-background-link-dark" id="result-container" style="width: 100%">
+            <div class="wrapper">
+                <div class="" id="result-title">
+                    <h1 class="title" id="main-title">Quiz Scores</h1>
+                </div>
+                <div class="test-scores">
+                    <h2></h2>
+                </div>
+                <div>
+                    <button class="js-modal-trigger button is-link is-dark" data-target="modal-js-example">
+                        Open for surprise!
+                    </button>
+                </div>
             </div>
         </div>
-        <div class="leaderboard-container">
-            <div class="lb-titler">
-                <h1>LeaderBoard</h1>
-            </div>
-            <div class="leaderboard">
-                <ul>
-                    <li> </li>
-                </ul>
+        <div class="leaderboard-container box has-background-link-dark" style="width: 100%">
+            <div class="wrapper">
+                <div class="lb-title">
+                    <h1 class="title" id="main-title">LeaderBoard</h1>
+                </div>
+                <div class="leaderboard">
+                    <ol>
+                    </ol>
+                </div>
             </div>
         </div>
-        <footer>
-            <h4 class="footer-text">Made by K.I.D with 🫀</h4>
-        </footer>
-        <script src=""></script>
-    </body>
+    </div>
+    <footer class="footer has-background-link-dark p-0" id="footer">
+        <div class="content has-text-centered">
+            <h4>Made by K.I.D with 🫀</h4>
+        </div>
+    </footer>
+    <script src=""></script>
+</body>
+
 </html>

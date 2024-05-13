@@ -1,42 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Choose Your Quiz</title>
-        <link rel="stylesheet" href="">
-        <link rel="stylesheet" href="">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
-    </head>
-    <body> 
-        <div class="main-container">
-            <div class="quiz-container">
-                <div class="heading">
-                    <h1 class="quiz-title">Choose Your Quiz</h1>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Choose Your Quiz</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+</head>
+
+<body class="container is-fullhd" id="body">
+    <div class="box has-background-link-dark" id="main-container">
+        <!-- quiz title container -->
+        <div class="content has-text-centered quiz-container">
+            <div class="content has-text-centered" id="quiz-title">
+                <!-- quiz title -->
+                <h1 class="title" id="main-title">Choose Your Quiz</h1>
+                <div class="subtitle quiz-score">
+                    <!-- quiz score counter -->
+                    <span id="correct-answers">0</span>/<span id="total-questions">10</span>
                 </div>
-                <div class = "quiz-score"> 
-                <span id = "correct-answers">0</span>/<span id= "total-questions">10</span>
-                </div>
-            </div>
-
-            <div class="question-card">
-                <h2 class="question-quiz" id="question"> </h2>
-
-                <ul class="options">
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
-                </ul>
-            </div>
-
-            <div class="button-options">
-                <button type="button" id="back">Back</button>
-                <button type="button" id="next">Next</button>
             </div>
         </div>
-        <footer>
-            <h4 class="footer-text">Made by K.I.D with 🫀</h4>
-        </footer>
-        <script src=""></script>
-    </body>
+        <!-- question container -->
+        <div class="question-card box p-6 has-text-centered has-background-info-dark">
+            <!-- question -->
+            <h2 class="question-quiz" id="question"> question goes here </h2>
+            <div class="content">
+                <ol class="options is-lower-alpha">
+                    <!-- answer options -->
+                    <li>dog </li>
+                    <li>cat </li>
+                    <li>bird </li>
+                    <li>fish </li>
+                </ol>
+            </div>
+        </div>
+        <!-- buttons -->
+        <div class="button-options">
+            <button type="button" id="back">Back</button>
+            <button type="button" id="next">Next</button>
+        </div>
+    </div>
+    <footer class="footer has-background-link-dark p-0" id="footer">
+        <div class="content has-text-centered">
+            <h4>Made by K.I.D with 🫀</h4>
+        </div>
+    </footer>
+    <script src=""></script>
+</body>
+
 </html>

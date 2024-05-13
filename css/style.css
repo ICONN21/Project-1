@@ -1,6 +1,40 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css";
-
+/* styling for all three html */
 *{
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
+#body{
+    margin-top:3rem;
+}
+
+
+#main-container {
+    justify-content: center;
+    align-items: center;
+}
+
+#quiz-title{
+   justify-content: center;
+   padding-bottom: 4rem;
+}
+
+#main-title{
+    padding-top: 3rem;
+}
+
+#footer{
+    border-radius: 0.2rem;
+}
+
+/* styling for just the quiz html */
+.question-quiz{
+    padding: 1rem;
+}
+
+.options{
+    text-align: start;
+    padding-top: 1rem;
 }
