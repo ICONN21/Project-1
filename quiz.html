@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./assets/styles.css">
 </head>
 <body>
     <header class ="myHeader"></header>
@@ -12,21 +13,22 @@
             <div class="heading">
                 <h1 class="quiz-title">Choose Your Quiz</h1>
                 <div class = "quiz-score"></div>
-                <span id = "correct-answers">0</span>/<span id= "total-questions">10</span>
+                <span id = "correct-score"></span>/<span id= "total-questions"></span>
             </div>
         </div>
         <div class="question-card">
-            <h2 class="question-quiz" id="question">Question goes here</h2>
+            <h2 class="question-quiz" id="question"></h2>
             <ul class="options">
-                <li> option </li>
-                <li> option</li>
-                <li> option</li>
-                <li> option </li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
             </ul>
+            <div id="result"></div>
         </div>
         <div class="button-options">
-            <button type="button" id="back">Back</button>
-            <button type="button" id="next">Next</button>
+            <button type="button" id="check-answer">Check Answer!</button>
+            <button type="button" id="play-again">Restart!</button>
         </div>
     </div>
     <footer>
