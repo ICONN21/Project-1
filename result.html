@@ -11,39 +11,66 @@
 
 <body class="container is-fullhd" id="body">
     <div class="flex">
+        <!-- results container -->
         <div class="result-container box has-background-link-dark" id="result-container" style="width: 100%">
             <div class="wrapper">
+                <!-- score title -->
                 <div class="" id="result-title">
                     <h1 class="title" id="main-title">Quiz Scores</h1>
                 </div>
+                <!-- quiz scores -->
                 <div class="test-scores">
-                    <h2></h2>
+                    <p></p>
                 </div>
                 <div>
+                    <!-- gif modal -->
                     <button class="js-modal-trigger button is-link is-dark" data-target="modal-js-example">
                         Open for surprise!
                     </button>
                 </div>
             </div>
         </div>
+        <!-- leaderboard container -->
         <div class="leaderboard-container box has-background-link-dark" style="width: 100%">
             <div class="wrapper">
+                <!-- leadboard title -->
                 <div class="lb-title">
                     <h1 class="title" id="main-title">LeaderBoard</h1>
                 </div>
-                <div class="leaderboard">
+                <!-- leaderboard -->
+                <div class="leaderboard" id="leaderboard">
                     <ol>
+                        <h2>5000</h2>
+                        <span>cutiepie
+                            <p> cutiepie@quiz.com</p>
+                        </span>
+                    </ol>
+                    <ol>
+                        <h2>5000</h2>
+                        <span>cutiepie
+                            <p> cutiepie@quiz.com</p>
+                        </span>
+                    </ol>
+                    <ol>
+                        <h2>5000</h2>
+                        <span>cutiepie
+                            <p> cutiepie@quiz.com</p>
+                        </span>
                     </ol>
                 </div>
             </div>
         </div>
+    </div>
+     <!-- back button -->
+    <div class="back-button">  
+        <button class="button is-link is-dark is-normal has-text-white" type="button" id="backButton">Back</button>
     </div>
     <footer class="footer has-background-link-dark p-0" id="footer">
         <div class="content has-text-centered">
             <h4>Made by K.I.D with 🫀</h4>
         </div>
     </footer>
-    <script src=""></script>
+    <script src="./assets/result.js"></script>
 </body>
 
 </html>

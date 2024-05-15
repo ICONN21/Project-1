@@ -1,3 +1,7 @@
+:root{
+    --darkblue: #00001a;
+}
+
 .flex{
     display:flex;
     justify-content: center;
@@ -25,3 +29,25 @@
 .test-scores{
     padding-bottom:2rem;
 }
+
+ol{
+    justify-content:center;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    gap:3rem;
+  }
+
+  h2{
+    padding: 1rem;
+    text-align: center;
+    border-top: white solid 2px;
+  }
+
+  span{
+    font-size: smaller;
+    padding:1rem;
+  }
+  
+ 
