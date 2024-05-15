@@ -5,20 +5,27 @@ const _totalQuestion = document.getElementById('total-questions')
 const _checkBtn = document.getElementById('check-answer')
 const _playAgainBtn = document.getElementById('play-again')
 const _result = document.getElementById('result')
-
+const _modal = document.getElementById("myModal");
+const _span = document.getElementsByClassName("close")[0];
+const _yesButton = document.getElementById("yesButton")
+const _noButton = document.getElementById("noButton")
+const _finishButton = document.getElementById('finishButton');
 
 let correctAnswer = "", correctScore = askedCount = 0, totalQuestion = 20;
 
 //adding event listeners for the page on different elements. 
 function eventListeners() {
     _checkBtn.addEventListener('click', checkAnswers);
-    _playAgainBtn.addEventListener('click', restartQuiz)
+    _playAgainBtn.addEventListener('click', displayModal)
+    _finishButton.addEventListener('click', function () {
+        window.location.href = 'result.html'
+    })
 }
 
 document.addEventListener('DOMContentLoaded', () => {
  loadingQuestion()
  eventListeners()
- addToLocalStorage()
+ seeResults()
  _totalQuestion.textContent = totalQuestion;
  _correctScore.textContent = correctScore;
 });
@@ -75,6 +82,7 @@ function checkAnswers() {
             _result.innerHTML = `<p><small><b>Correct Answer: </b> ${correctAnswer}</small></p>`
         }
         checkCount()
+        seeResults()
     }
 }
 
@@ -95,7 +103,15 @@ function setCount() {
     // console.log('setCount', correctScore, totalQuestion)
     _totalQuestion.textContent = totalQuestion;
     _correctScore.textContent = correctScore;
-    
+    addToLocalStorage()
+}
+
+function seeResults() {
+    if(askedCount == 2) {
+        _finishButton.style.display = 'block';
+    } else {
+        _finishButton.style.display = 'none';
+    }
 }
 
 function restartQuiz() {
@@ -111,4 +127,24 @@ function restartQuiz() {
 function addToLocalStorage() {
     localStorage.setItem('correctScore', correctScore)
 }
+
+function displayModal() {
+    _playAgainBtn.onclick = function () {
+    _modal.style.display = 'block'
+    _span.onclick = function() {
+        _modal.style.display = "none";
+      }
+      window.onclick = function(event) {
+        if (event.target == _modal) {
+          _modal.style.display = "none";
+        };
+      }; _noButton.onclick = function() {
+        _modal.style.display = "none";
+      }; _yesButton.onclick = function() {
+        restartQuiz()
+        _modal.style.display = "none";
+      }
+    }
+}
+
 
