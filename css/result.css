@@ -1,0 +1,27 @@
+.flex{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.wrapper{
+    padding: 0 6rem 1rem 6rem;
+    width: 100%;
+}
+
+#result-title{
+    justify-content: center;
+    padding-bottom: 4rem;
+ }
+
+ #result-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.test-scores{
+    padding-bottom:2rem;
+}

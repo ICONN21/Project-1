@@ -1,34 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Choose Your Quiz</title>
-        <link rel="stylesheet" href="">
-        <link rel="stylesheet" href="">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
-    </head>
-    <body>
-        <div class="landing-container">
-            <div class="quiz-title">
-            <h1 class="title">CHOOSE YOUR QUIZ</h1>
-            </div>
-            <form class="user-container">
-                <div class="user-name">
-                    <label class="left-text" for="username">Username:</label>
-                    <input type="text" id="username" placeholder="@chooseyourquiz">
-                </div>
-                <div class="email-container">
-                    <label class="input-email" for="email">Email:</label>
-                    <input type="text" id="userEmail" placeholder="user@chooseyourquiz.com">
-                </div>
-                <div class="start-button">
-                    <button type="button" id="start">Start</button>
-                </div>
-            </form>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Choose Your Quiz</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+</head>
+
+<body class="container is-fullhd" id="body">
+    <div class="box has-background-link-dark" id="main-container">
+        <div class="content has-text-centered" id="quiz-title">
+            <!-- div container for Title -->
+            <h1 class="title" id="main-title">Quiz Games</h1>
+            <p class="subtitle">at your own risk</p>
         </div>
-        <footer>
-            <h4 class="footer-text">Made by K.I.D with 🫀</h4>
-        </footer>
-        <script src=""></script>
-    </body>    
-</html>    
+        <form class="user-container box p-6 has-text-centered has-background-info-dark">
+            <!-- form container-->
+            <div class="user-name field">
+                <!-- username input -->
+                <label class="label ">Username:</label>
+                <input class="input is-link" type="text" id="username" placeholder="@chooseyourquiz">
+            </div>
+            <div class="email-container field">
+                <!-- user email input -->
+                <label class="label ">Email:</label>
+                <input class="input is-link" type="text" id="userEmail" placeholder="user@chooseyourquiz.com">
+            </div>
+            <div class="start-button">
+                <!-- start button -->
+                <button class="button is-link is-dark is-normal has-text-white" type="button">Start</button>
+            </div>
+        </form>
+    </div>
+    <footer class="footer has-background-link-dark p-0" id="footer">
+        <div class="content has-text-centered">
+            <h4>Made by K.I.D with 🫀</h4>
+        </div>
+    </footer>
+    <script src=""></script>
+</body>
+
+</html>
