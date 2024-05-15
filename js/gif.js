@@ -2,7 +2,7 @@
 
 let APIKEY = "PMszhtvO0uSR15ZuGmqnemDDItzYKs3W";
 let searchImg = "";
-let score = 20;
+let score = localStorage.getItem(_correctScore);
  
 if(0 <= score && score <=4){
   searchImg = "sad";
