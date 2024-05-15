@@ -1,10 +1,10 @@
 
 
 let APIKEY = "PMszhtvO0uSR15ZuGmqnemDDItzYKs3W";
-let searchImg = ""
-let score = 12
+let searchImg = "";
+let score = localStorage.getItem(_correctScore);
  
-if(0 <= score){
+if(0 <= score && score <=4){
   searchImg = "sad";
 } else {
    if(5 <= score && score <=9){
@@ -35,7 +35,6 @@ function init() {
     fetch(apiUrl)
        .then(response => response.json())
        .then(content => {
-          //  data, pagination, meta
           console.log(content.data)
            let fig = document.createElement("figure");
            let img = document.createElement("img");
