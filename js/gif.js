@@ -1,10 +1,10 @@
 
 
 let APIKEY = "PMszhtvO0uSR15ZuGmqnemDDItzYKs3W";
-let searchImg = ""
-let score = 12
+let searchImg = "";
+let score = 20;
  
-if(0 <= score){
+if(0 <= score && score <=4){
   searchImg = "sad";
 } else {
    if(5 <= score && score <=9){
