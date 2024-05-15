@@ -35,7 +35,6 @@ function init() {
     fetch(apiUrl)
        .then(response => response.json())
        .then(content => {
-          //  data, pagination, meta
           console.log(content.data)
            let fig = document.createElement("figure");
            let img = document.createElement("img");
