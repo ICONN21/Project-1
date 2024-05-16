@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
  _correctScore.textContent = correctScore;
 });
 
+// fetch information from quiz api
 async function loadingQuestion() {
     const apiUrl = 'https://opentdb.com/api.php?amount=20'
     const result = await fetch (`${apiUrl}`)
@@ -54,7 +55,7 @@ _options.innerHTML = `${optionsList.map((option, index) => `<li> ${index + 1}. <
 
 selectOption()
 }
-
+//makes the answers selectable 
 function selectOption() {
     _options.querySelectorAll('li').forEach((option => {
         option.addEventListener('click', () => {
@@ -67,7 +68,7 @@ function selectOption() {
     }))
 
 }
-
+//Allows check answer button to confirm that correct answer has been chosen.
 function checkAnswers() {
     // console.log('checkAnswers', _options.querySelector('.selected'))
     _checkBtn.disabled = true;
@@ -85,7 +86,7 @@ function checkAnswers() {
         seeResults()
     }
 }
-
+//checking how many questions have been asked + loading the next question. 
 function checkCount() {
     console.log('checkCount')
     askedCount++;
@@ -98,22 +99,22 @@ function checkCount() {
         }, 400);
     }
 }
-
+//adding number of correct answers to local storage 
 function setCount() {
     // console.log('setCount', correctScore, totalQuestion)
     _totalQuestion.textContent = totalQuestion;
     _correctScore.textContent = correctScore;
     addToLocalStorage()
 }
-
+//function that displays see results button once all the questions have been asked 
 function seeResults() {
-    if(askedCount == 2) {
+    if(askedCount == 20) {
         _finishButton.style.display = 'block';
     } else {
         _finishButton.style.display = 'none';
     }
 }
-
+//allows user to start over 
 function restartQuiz() {
     correctScore = askedCount = 0
     _playAgainBtn.style.display = "block"
@@ -123,11 +124,11 @@ function restartQuiz() {
     setCount();
     loadingQuestion()
 }
-
+//adds the number of correct answers to local storage 
 function addToLocalStorage() {
     localStorage.setItem('correctScore', correctScore)
 }
-
+//displays modal for user to confirm if they would like to restart the quiz. 
 function displayModal() {
     _playAgainBtn.onclick = function () {
     _modal.style.display = 'block'
