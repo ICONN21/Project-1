@@ -24,9 +24,9 @@ Overal the project presented many callenges, not the least of which was learning
 
 # ScreenShots
 
-![Landing Page](/screenshots/landingpage.png)
-![Quiz Page](/screenshots/QuizPage.png)
-![Results Page](/screenshots/ResultsPage.png)
+![Landing Page](./screenshots/landingpage.png)
+![Quiz Page](./screenshots/QuizPage.png)
+![Results Page](./screenshots/ResultsPage.png)
 
 
 # Repository Links
