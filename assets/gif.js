@@ -1,7 +1,7 @@
 let APIKEY = "PMszhtvO0uSR15ZuGmqnemDDItzYKs3W";
 let searchImg = "";
 let score = localStorage.getItem('correctScore');
- 
+ // checking user end score to determine which gif should be printed to screen 
 if(0 <= score && score <=4){
   searchImg = "sad";
 } else {
@@ -21,7 +21,7 @@ if(0 <= score && score <=4){
 }
 
 }
-
+//fethcing the data from api to display gif 
 document.addEventListener("DOMContentLoaded", init);
 function init() {
   document.getElementById("btnSearch").addEventListener("click", ev => {
@@ -58,7 +58,7 @@ const lbTimeline = document.getElementById('leaderboard');
 
 function newUserScore(){
     console.log(userInputArray);
-    for (let i = userInputArray.length -1; i > 0; i++){
+    for (let i = 0; i < userInputArray.length; i++){
         const recentUserScore = userInputArray[i];
 
         // creating elements for score, user, and email
@@ -89,7 +89,7 @@ backButton.addEventListener('click', function (event) {
     window.location.href = 'index.html';
 
 });
-
+//leaderboard score loads when page loads. 
 window.onload = function(){
     newUserScore()
 }
