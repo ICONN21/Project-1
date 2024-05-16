@@ -4,25 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <title>Quiz Games</title>
+    <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
 </head>
 
 <body class="container is-fullhd" id="body">
-    <header class="myHeader"></header>
+    <!-- quiz container -->
     <div class="main-container box has-background-link-dark" id="main-container">
         <div class="quiz-container content has-text-centered">
             <div class="heading content has-text-centered">
-                <h1 class="quiz-title title">Choose Your Quiz</h1>
+                <!-- title -->
+                <h1 class="quiz-title title">Quiz Games</h1>
                 <div class="quiz-score subtitle">
+                <!-- score count -->
                     <span id="correct-score"></span>/<span id="total-questions"></span>
                 </div>
             </div>
         </div>
-
+        <!-- question card -->
         <div class="question-card box p-6 has-text-centered has-background-info-dark">
+            <!-- question -->
             <h2 class="question-quiz" id="question"></h2>
+            <!-- answer options -->
             <ul class="options">
                 <li></li>
                 <li></li>
@@ -31,11 +35,13 @@
             </ul>
             <div id="result"></div>
         </div>
-
+        <!-- buttons -->
         <div class="button-options button">
+            <!-- check answer button -->
             <button type="button is-info is-dark is-normal has-text-white" id="check-answer">Check Answer!</button>
         </div>
         <div class="button-options button">
+            <!-- restart quiz button -->
             <button type="button is-info is-dark is-normal has-text-white" id="play-again">Restart!</button>
         </div>
         <div id="finishButtonContainer">

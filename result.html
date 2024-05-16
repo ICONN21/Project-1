@@ -3,49 +3,57 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Choose Your Quiz</title>
+    <title>Quiz Games</title>
     <link rel="stylesheet" href="./css/result.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
 </head>
 
 <body class="container is-fullhd" id="body">
     <div class="flex">
+        <!-- results container -->
         <div class="result-container box has-background-link-dark" id="result-container" style="width: 100%">
             <div class="wrapper">
+                <!-- score title -->
                 <div class="" id="result-title">
                     <h1 class="title" id="main-title">Quiz Scores</h1>
                 </div>
+                <!-- quiz scores -->
                 <div class="test-scores">
-                    <h2></h2>
+                    <p></p>
                 </div>
                 <div>
-                     <button id="btnSearch" class="js-modal-trigger" data-target="modal-js-example" class="button is-primary">
-            Click Me
-            <div class="out"></div>
-          </button>
+                    <button id="btnSearch" class="js-modal-trigger button is-link is-dark is-normal has-text-white" data-target="modal-js-example">
+                        Click Me
+                        <div class="out"></div>
+                    </button>
                 </div>
             </div>
         </div>
 
         <div class="leaderboard-container box has-background-link-dark" style="width: 100%">
             <div class="wrapper">
+                <!-- leadboard title -->
                 <div class="lb-title">
                     <h1 class="title" id="main-title">LeaderBoard</h1>
                 </div>
-                <div class="leaderboard">
-                    <ol>
-                    </ol>
+                <!-- leaderboard -->
+                <div class="leaderboard" id="leaderboard">
+
                 </div>
             </div>
         </div>
+    </div>
+    <!-- back button -->
+    <div class="back-button">
+        <button class="button is-link is-dark is-normal has-text-white" type="button" id="backButton">Back</button>
     </div>
     <footer class="footer has-background-link-dark p-0" id="footer">
         <div class="content has-text-centered">
             <h4>Made by K.I.D with 🫀</h4>
         </div>
     </footer>
-    <script src="js\gif.js"></script>
+    <script src="./assets/gif.js"></script>
 </body>
 
 </html>

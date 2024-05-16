@@ -1,8 +1,6 @@
-
-
 let APIKEY = "PMszhtvO0uSR15ZuGmqnemDDItzYKs3W";
 let searchImg = "";
-let score = localStorage.getItem(_correctScore);
+let score = localStorage.getItem('correctScore');
  
 if(0 <= score && score <=4){
   searchImg = "sad";
@@ -23,8 +21,6 @@ if(0 <= score && score <=4){
 }
 
 }
-
-  
 
 document.addEventListener("DOMContentLoaded", init);
 function init() {
@@ -55,3 +51,45 @@ function init() {
       }
       
 
+// leaderboard js
+const userInputArray = JSON.parse(localStorage.getItem('userInputArray'));
+const lbTimeline = document.getElementById('leaderboard');
+
+
+function newUserScore(){
+    console.log(userInputArray);
+    for (let i = userInputArray.length -1; i > 0; i++){
+        const recentUserScore = userInputArray[i];
+
+        // creating elements for score, user, and email
+        const lbScore = document.createElement('ol')
+        const userScore = document.createElement('h2');
+        const userName = document.createElement('span');
+        const userEmail = document.createElement('p');
+
+        // setting data onto created elements
+        userScore.textContent = score;
+        userName.textContent = recentUserScore.user;
+        userEmail.textContent = recentUserScore.email;
+
+        // appending data on to html
+        lbTimeline.append(lbScore);
+        lbScore.appendChild(userScore);
+        lbScore.appendChild(userName);
+        userName.appendChild(userEmail); 
+    }
+}
+
+// back button js
+const backButton = document.getElementById('backButton');
+
+backButton.addEventListener('click', function (event) {
+    event.preventDefault();
+
+    window.location.href = 'index.html';
+
+});
+
+window.onload = function(){
+    newUserScore()
+}
